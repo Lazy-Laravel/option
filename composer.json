@@ -1,0 +1,67 @@
+{
+    "name": "lazylaravel/option",
+    "description": "WordPress like option feature for laravel 8",
+    "keywords": [
+        "lazylaravel",
+        "option",
+        "laravel",
+        "database settings",
+        "db settings",
+        "eloquent", "wordpress like option table for laravel"
+    ],
+    "homepage": "https://github.com/lazy-laravel/option",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "LazyLaravel",
+            "email": "hello@lazylaravel.com",
+            "homepage": "https://lazylaravel.com"
+        },
+        {
+            "name": "Al-Amin Islam Nerob",
+            "email": "nerobit786@gmail.com",
+            "homepage": "https://facebook.com/nerob24"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "laravel/framework": "^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "LazyLaravel\\Option\\": "src"
+        },
+        "files": [
+            "src/helper.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LazyLaravel\\Option\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LazyLaravel\\Option\\OptionServiceProvider"
+            ],
+            "aliases": {
+                "Option": "LazyLaravel\\Option\\OptionFacade",
+                "Opt": "LazyLaravel\\Option\\OptFacade"
+            }
+        }
+    }
+}
